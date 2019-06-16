@@ -17,19 +17,17 @@ in this project, it gonna be
 scrapy genspider -t basic quotesjs quotes.toscrape.com/js/
 
 ## Note
-whenever you want to use exceute a custom script always use the execute endpoint
-run:
+1. whenever you want to use exceute a custom script always use the execute endpoint
+2. run:
 scrapy crawl quotesjs -o all_pages.json
 
-adapt setting.py
+3. adapt setting.py
 DOWNLOADER_MIDDLEWARES = {
     'scrapy_splash.SplashCookiesMiddleware': 723,
     'scrapy_splash.SplashMiddleware': 725,
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
 }
-
-SPLASH_URL = 'YOUR SPLASH URL' 
-In this case:
-SPLASH_URL = '192.168.99.100:8050' 
-
-FEED_EXPORT_ENCODING = 'UTF-8'
+<br>SPLASH_URL = 'YOUR SPLASH URL' 
+<br>In this case:
+<br>SPLASH_URL = '192.168.99.100:8050' 
+<br>FEED_EXPORT_ENCODING = 'UTF-8'
